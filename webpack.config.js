@@ -49,7 +49,7 @@ class RunAfterCompile {
 
 // create generic webpack config object
 let config = {
-  entry: './app/assets/scripts/App.js',
+  entry: './app/assets/scripts/app.js',
   plugins: pages,
   module: {
     rules: [

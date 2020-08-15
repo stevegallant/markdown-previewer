@@ -1,8 +1,8 @@
 {
-  "name": "project-name-here",
+  "name": "markdown-previewer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This is a simple React app that allows you to type in text using markdown in an editor element, and see the formatted result in the preview area.",
+  "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
@@ -10,16 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "REPLACE"
+    "url": "git+https://github.com/stevegallant/markdown-previewer.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "REPLACE"
+    "url": "https://github.com/stevegallant/markdown-previewer/issues"
   },
-  "homepage": "REPLACE",
+  "homepage": "https://github.com/stevegallant/markdown-previewer#readme",
   "dependencies": {
+    "bootstrap": "^4.5.2",
+    "marked": "^1.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
