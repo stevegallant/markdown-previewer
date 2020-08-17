@@ -12,21 +12,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorText: '',
+      editorText: defaultEditorText,
       formattedText: '# output goes here!!'
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {
-
+  handleChange(e) {
+    this.setState({editorText: e.target.value});
+    document.getElementById("preview").innerHTML = marked(this.state.editorText);
   }
 
   render() {
     return (
       <>
-        <Editor defaultText={defaultEditorText}/>
-        <Previewer text={marked(this.state.formattedText)}/>
+        <textarea name="editor" id="editor" cols="30" rows="10" value={this.state.editorText} onChange={this.handleChange}/>
+        {/* <Previewer text={this.state.editorText}/> */}
+        <div id="preview"></div>
       </>
     );
   }

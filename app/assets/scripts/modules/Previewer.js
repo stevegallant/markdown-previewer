@@ -1,8 +1,11 @@
 import React from 'react';
+import marked from 'marked';
 
 const Previewer = (props) => {
   return (
-    <div id="preview">{props.text}</div>
+    <div id="preview">
+      {marked(props.text)}
+    </div>
   );
 };
 
