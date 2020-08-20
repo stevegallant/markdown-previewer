@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 const marked = require('marked');
 
 marked.setOptions({
@@ -6,8 +7,9 @@ marked.setOptions({
 });
 
 const Previewer = (props) => {
+  let cleanHTML = DOMPurify.sanitize(marked(props.text));
   return (
-    <div id="preview" dangerouslySetInnerHTML={{__html: marked(props.text)}}></div>
+    <div id="preview" dangerouslySetInnerHTML={{__html: cleanHTML}}></div>
   );
 };
 

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/stevegallant/markdown-previewer#readme",
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "dompurify": "^2.0.12",
     "marked": "^1.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
