@@ -7,28 +7,26 @@ import marked from 'marked';
 import Editor from './modules/Editor';
 import Previewer from './modules/Previewer';
 
+
 // Main component class
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       editorText: defaultEditorText,
-      formattedText: '# output goes here!!'
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({editorText: e.target.value});
-    document.getElementById("preview").innerHTML = marked(this.state.editorText);
   }
 
   render() {
     return (
       <>
-        <textarea name="editor" id="editor" cols="30" rows="10" value={this.state.editorText} onChange={this.handleChange}/>
-        {/* <Previewer text={this.state.editorText}/> */}
-        <div id="preview"></div>
+        <Editor value={this.state.editorText} onChange={this.handleChange}/>
+        <div id="preview" dangerouslySetInnerHTML={{__html: this.state.editorText}}></div>
       </>
     );
   }
