@@ -1,11 +1,13 @@
 import React from 'react';
-import marked from 'marked';
+const marked = require('marked');
+
+marked.setOptions({
+  breaks: true
+});
 
 const Previewer = (props) => {
   return (
-    <div id="preview">
-      {marked(props.text)}
-    </div>
+    <div id="preview" dangerouslySetInnerHTML={{__html: marked(props.text)}}></div>
   );
 };
 

@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <>
         <Editor value={this.state.editorText} onChange={this.handleChange}/>
-        <div id="preview" dangerouslySetInnerHTML={{__html: this.state.editorText}}></div>
+        <Previewer text={this.state.editorText}/>
       </>
     );
   }
