@@ -5,7 +5,6 @@ This is a simple React app that allows you to type in text using markdown in an 
 
 ## Technologies
 Project is created with:
-* HTML5
-* CSS
-* JavaScript
-* React
+* React JavaScript
+* npm and webpack
+* Bootstrap CSS
