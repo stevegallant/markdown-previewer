@@ -1,7 +1,19 @@
-/* * {
-  box-sizing: border-box;
-} */
-
 body {
   font-family: 'Play', sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+
+  @media (min-width: 540px) {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+
+  @media (min-width: 540px) {
+    font-size: 32px;
+  }
 }
