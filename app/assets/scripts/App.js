@@ -23,8 +23,16 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Editor value={this.state.editorText} onChange={this.handleChange}/>
-        <Previewer text={this.state.editorText}/>
+        <div className="row">
+          <div className="col-lg-6">
+            <h2>Enter Your Markdown</h2>
+            <Editor value={this.state.editorText} onChange={this.handleChange}/>
+          </div>
+          <div className="col-lg-6">
+            <h2>Preview</h2>
+            <Previewer text={this.state.editorText}/>
+          </div>
+        </div>
       </>
     );
   }
@@ -51,7 +59,7 @@ const defaultEditorText = `
   > **This is a bolded blockquote**
 
   Sample image:
-  ![alt text goes here](https://ritholtz.com/wp-content/uploads/2020/03/dontpanic.jpg "Don't Panic!")
+  ![alt text goes here](./assets/img/dontpanic.jpg "Don't Panic!")
 `;
 
 ReactDOM.render(<App />, document.querySelector('#app'));

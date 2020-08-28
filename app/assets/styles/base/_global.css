@@ -1,12 +1,7 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: 'Play', sans-serif;
-}
-
-#app {
-  display: flex;
-  
 }
